@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nom = prompt("Introdueix el nom de l'alumne: ", " ");
+		var nota1 = prompt("Introdueix la primera nota: ", " ");
+		var nota2 = prompt("Introdueix la segona nota: ", " ");
+		var nota3 = prompt("Introdueix la tercera nota: ", " ");
+		var notaTotal = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3;
+		if (notaTotal >= 5) {
+			document.write("Congratulations! You pass the exam!");
+		}
+		document.write("<br/>");
+
+		var email1 = prompt("Introdueix un email: ", " ");
+		var email2 = prompt("Introdueix un altre email: ", " ");
+		if (email1 != email2) {
+			document.write("They are not equal!");
+		}
+		document.write("<br/>");
+
+		var edat = prompt("Introdueix la teva edat: ", " ");
+		if (edat >= 18 && edat < 65) {
+			document.write("You are in working age!");
+		}
+		document.write("<br/>");
+
+		var num = prompt("Introdueix un nombre: ", " ");
+		if (num % 2 == 0) {
+			document.write("Pair number!");
+		} 
+		document.write("<br/>");
+
+	</script>
+</body>
+</html>

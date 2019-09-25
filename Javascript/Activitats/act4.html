@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var x = prompt("Introdueix el costat d'un quadrat: ", " ");
+		var perim = x * 4;
+		document.write("Perimetre del quadrat: " + perim);
+		document.write("<br/>");  
+
+		var valor1 = prompt("Introdueix un primer nombre: ", " ");
+		var valor2 = prompt("Introdueix un segon nombre: ", " ");
+		var valor3 = prompt("Introdueix un tercer nombre: ", " ");
+		var valor4 = prompt("Introdueix un quart nombre: ", " ");
+
+		var sum = parseInt(valor1)+parseInt(valor2)+parseInt(valor3)+parseInt(valor4);
+		var product = valor1*valor2*valor3*valor4;
+
+		document.write("Suma dels valors: " + sum);
+		document.write("<br/>");
+		document.write("producte dels valors: " + product);
+		document.write("<br/>");  
+
+		var preu = prompt("Introdueix el preu d'un llibre: ", " ");
+		var quantitat = prompt("Introdueix la quantitat: ", " ");
+		var factura = preu*quantitat;
+		document.write("Preu total: " + factura);
+		document.write("<br/>");
+
+		var base = prompt("Introdueix una base: ", " ");
+		var altura = prompt("Introdueix una altura: ", " ");
+		var area = (base*altura)/2;
+		document.write("area del triangle: " + area);
+
+	</script>
+</body>
+</html>
