@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var dia = 25;
+		var mes = 12;
+		var ano = 2020;
+
+		if (dia == 25 && mes == 12 && ano == 2019) {
+			document.write("Today is Christmas.");
+		} else {
+			document.write("Today is not Christmas.");
+		}
+		document.write("<br/>");
+
+		var num1 = 5;
+		var num2 = 11;
+		var num3 = 8;
+
+		if (num1 < 10 || num2 < 10 ||  num3 < 10) {
+			document.write("All the numbers are less than 10.");
+		} 
+		document.write("<br/>");
+
+		var x = -1;
+		var y = 2;
+
+		if (x > 0 && y > 0) {
+			document.write("First Quadrant");
+		}
+		if (x < 0 && y > 0) {
+			document.write("Second Quadrant");
+		}
+		if ( x < 0 && y < 0) {
+			document.write("Third Quadrant");
+		}
+		if (x > 0 && y < 0) {
+			document.write("Fourth Quadrant");
+		}
+		document.write("<br/>");
+
+
+		var salary = 200;
+		var years = 3;
+
+		if (salary < 500 && years >= 10) {
+			salary = salary + (salary * 0.2);
+			document.write("This workers' salaryU is: " + salary);
+		}
+		else if (salary < 500 && years < 10) {
+			salary = salary + (salary * 0.05);
+			document.write("This workers' salaryS is: " + salary);
+		}
+		else {
+			document.write("This workers' salaryA is: " + salary);
+		}
+	</script>
+</body>
+</html>

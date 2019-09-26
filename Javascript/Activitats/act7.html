@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num1 = 87000;
+		var num2 = 4900;
+		var num3 = 599;
+
+		if (num1 > num2 && num1 > num3) {
+			document.write(num1 + " is the biggest.");
+		} else if (num2 > num1 && num2 > num3) {
+			document.write(num2 + " is the biggest.");
+		} else {
+			document.write(num3 + " is the biggest.");
+		}
+
+		document.write("<br/>");
+
+		var num4 = 87;
+		var num5 = 4;
+		var num6 = 5;
+
+		if (num4 < num5 && num4 < num6) {
+			document.write(num4 + " is the smallest.");
+		} else if (num5 < num4 && num5 < num6) {
+			document.write(num5 + " is the smallest.");
+		} else {
+			document.write(num6 + " is the smallest.");
+		}
+
+		document.write("<br/>");
+
+		var num = 99;
+		if (num < 10) {
+			document.write(num + " has 1 digit.");
+		} 
+
+		if (num >= 10 && num < 100) {
+			document.write(num + " has 2 digits");
+		} 
+
+		if (num >= 100 && num < 1000) {
+			document.write(num + " has 3 digits.");
+		}
+
+		document.write("<br/>");
+
+
+		var numero = -99;
+
+		if (numero == 0) {
+			document.write(numero + " is zero.");
+		} else if (numero < 0) {
+			document.write(numero + " is negative.");
+		} else {
+			document.write(numero + " is positive.");
+		}
+	</script>
+</body>
+</html>
