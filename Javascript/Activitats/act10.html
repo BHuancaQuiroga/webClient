@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num = 1;
+		while(num <= 50){
+			document.write(num + "	");
+			num++;
+		}
+		document.write("<br/>");
+
+		num = 50;
+		while(num >= 1){
+			document.write(num + "	");
+			num--;
+		}
+		document.write("<br/>");
+
+		num = -50;
+		while(num <= 0){
+			document.write(num + "	");
+			num++;
+		}
+		document.write("<br/>");
+
+		num = 1;
+		while(num <= 100){
+			if (num % 2 == 0) {
+				document.write(num + "	");
+			}
+			num++;
+		}
+		document.write("<br/>");
+
+		var cont = 0;
+		var k = 11;
+		while(cont <= 25) {
+			document.write(k + "	");
+			for(var i = 0; i < 10; i++) {
+				k = k + 11;
+			}
+			k = k + 12;
+			cont++;
+
+		}
+	</script>
+</body>
+</html>
