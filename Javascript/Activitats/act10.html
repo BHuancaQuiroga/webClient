@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var num = 1;
+		while(num <= 50){
+			document.write(num + "	");
+			num++;
+		}
+		document.write("<br/>");
+
+		num = 50;
+		while(num >= 1){
+			document.write(num + "	");
+			num--;
+		}
+		document.write("<br/>");
+
+		num = -50;
+		while(num <= 0){
+			document.write(num + "	");
+			num++;
+		}
+		document.write("<br/>");
+
+		num = 1;
+		while(num <= 100){
+			if (num % 2 == 0) {
+				document.write(num + "	");
+			}
+			num++;
+		}
+		document.write("<br/>");
+		/*
+		var cont = 0;
+		var k = 11;
+		var j = 12;
+		var num;
+		while(cont != 25) {
+			for(var i = 0; i < 8; i++){
+				num = k;
+				document.write(num + "	");
+				cont++;
+			}
+		}
+		*/
+
+		var primo = 7;
+		var count = 1;
+		while(primo != 70){
+			primo = 7 * count;
+			document.write(primo + "	");
+			count++;
+		}
+		document.write("<br/>");
+
+
+		var count = 0;
+		var failed = 0;
+		var passed = 0;
+		while(count < 10){
+			count++;
+			var ans = prompt('Introduce una nota: ' , '');
+			if (ans >= 5) {
+				passed++;
+			} else {
+				failed++;
+			}
+		}
+		document.write('Aprovats: ' + passed + ' Suspesos: ' + failed);
+		document.write("<br/>");
+
+		var count = 0;
+		var type1 = 0;
+		var type2 = 0;
+		var sum = 0;
+		while(count < 5){
+			count++;
+			var ans = prompt('Introduce un salario: ' , '');
+			if (ans >= 500 && ans < 1000) {
+				type1++;
+			} else {
+				type2++;
+			}
+			sum = parseInt(ans) + parseInt(sum);
+		}
+		document.write('Workers between 500 and 1000: ' + type1 + ' Workers higher than 1000: ' + type2 + " Total salary: " + sum);
+		document.write("<br/>");
+		
+		var num = 1;
+		var par = 0;
+		var inpar = 0;
+		while(num < 10){
+			if (num % 2 == 0) {
+				par++;
+			} else {
+				inpar++;
+			}
+			num++;
+		}
+		document.write("Pares: " + par + " Inpares: " + inpar);
+		
+	</script>
+</body>
+</html>

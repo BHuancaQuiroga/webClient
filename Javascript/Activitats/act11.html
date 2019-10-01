@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		var bol = false;
+		var total = 0;
+		do {
+			var entrada = prompt("Introduce un número: " , " ");
+
+			if(entrada != 9999){
+				total = parseInt(total) + parseInt(entrada);
+			} else {
+				bol = true;
+				if (total == 0) {
+					document.write("ZERO");
+				} else if(total < 0) {
+					document.write("NEGATIVE");
+				} else {
+					document.write("POSITIVE");
+				}
+			}
+
+		} while(bol != true);
+		*/
+		/*
+		do{
+			var entrada = prompt("Introduce un id: " , " ");
+			var entrada2 = prompt("Introduce una edad: " , " ");
+			var entrada3 = prompt("Introduzca su sexo: " , " ");
+
+		} while(bol != true);
+		*/
+		cont = 0;
+		var total = 0;
+		do{
+			var money = 0;
+			var nom = prompt("Introduce un nombre: " , " ");
+			var cuenta = prompt("Introduce una cuenta: " , " ");
+			var dinero = prompt("Introduce la cantidad de dinero: " , " ");
+
+			document.write(nom + " es el dueño de la cuenta " + cuenta + " con el total de " + dinero + "€");
+			document.write("<br/>");
+			money = parseInt(money) + parseInt(dinero);
+			total = parseInt(total) + parseInt(dinero);
+
+			cont++;
+
+		} while(cont != 3);
+		document.write("Total: " + total);
+
+	</script>
+</body>
+</html>
