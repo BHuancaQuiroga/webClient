@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		var base;
+		var altura;
+		var count = 0;
+		for (var i = 0; i < 3; i++) {
+			base = prompt("Introduce una base: " , " ");
+			altura = prompt("Introduce una altura: " , " ");
+			var area = (base*altura)/2;
+			if (area > 12) {
+				count++;
+			}
+		}
+		document.write(count + " triangulos tienen una area mayor a 12.");
+		document.write("<br/>");
+		*/
+		var suma = 0;
+		for (var i = 0; i < 10; i++) {
+			var entrada = prompt("Introduce un numero: " , " ");
+			if (i >= 5) {
+				suma = parseInt(suma) + parseInt(entrada);
+			}	
+		}
+		document.write("Suma de los ultimos 5 numeros introducidos: " + suma);
+		document.write("<br/>");
+		
+		for (var i = 1; i <= 10; i++) {
+			document.write("5 x " + i + " = " + (5*i));
+			document.write("<br/>");
+		}
+		
+		var entrada = prompt("Introduce un numero: " , " ");
+		for (var i = 1; i <= 10; i++) {
+			document.write(entrada + " x " + i + " = " + (entrada*i));
+			document.write("<br/>");
+		}	
+		
+
+		var equilateros = 0;
+		var isoceles = 0;
+		var escaleno = 0;
+		for (var i = 1; i < 4; i++) {
+			var entrada = prompt("Introduce el primer angulo: " , " ");
+			var entrada2 = prompt("Introduce el segundo angulo: " , " ");
+			var entrada3 = prompt("Introduce el tercero angulo: " , " ");
+			if(entrada == entrada2 && entrada2 == entrada3 && entrada == entrada3){
+				equilateros++;
+			} else if(entrada == entrada3 && entrada != entrada2 && entrada3 != entrada2){
+				isoceles++;
+			} else{
+				escaleno++;
+			}
+		}
+		document.write("Equilateros: " + equilateros);
+		document.write("<br/>");
+		document.write("Isoceles: " + isoceles);
+		document.write("<br/>");
+		document.write("Escaleno: " + escaleno);
+		document.write("<br/>");
+		
+		if (equilateros > isoceles && equilateros > escaleno) {
+			document.write("Hay mas equilateros.");
+		} else if (isoceles > equilateros && isoceles > escaleno) {
+			document.write("Hay mas isoceles.");
+		} else {
+			document.write("Hay mas escalenos.");
+		}
+		<document.write("<br/>");
+
+		
+	</script>
+</body>
+</html>
