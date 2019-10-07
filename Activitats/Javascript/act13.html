@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function returnMin(a, b, c){
+
+			if(a < b && a < c){
+				document.write(a + " is the smallest number.");
+			} else if(b < a && b < c){
+				document.write(b + " is the smallest number.");
+			} else {
+				document.write(c + " is the smallest number.");
+			}
+		}
+
+		var num1 = 1;
+		var num2 = 10;
+		var num3 = 2;
+
+		var resultado = returnMin(num1, num2, num3);
+		document.write("<br/>");
+
+		
+
+		function returnSortAsc(a, b, c){
+
+			if (a < b) {
+				if(a < c){
+					if(b > c){
+						document.write(a + " < " + c + " < " + b);
+					} else {
+						document.write(a + " < " + b + " < " + c);
+					}
+				}
+			} 
+			else if(b < a) {
+
+					if(b < c){
+						if(a > c){
+							document.write(b + " < " + c + " < " + a);
+						} else {
+							document.write(b + " < " + a + " < " + c);
+						}
+					} else {
+						document.write(c + " < " + b + " < " + a);
+					}
+
+			}
+		}
+
+		var num1 = 4;
+		var num2 = 0;
+		var num3 = 1;
+
+		returnSortAsc(num1, num2, num3);
+		document.write("<br/>");
+
+		function calcPerim(costado){
+			var perimetro = costado*4;
+			return perimetro;
+		}
+
+		var costado = prompt("Introduce el costado de un cuadrado: ", " ");
+		costado = parseInt(costado);
+		var resultado = calcPerim(costado);
+		document.write("perimetro del cuadrado: " + resultado + " cm.");
+		document.write("<br/>");
+
+
+		function calcDigitos(num) {
+
+			var count = 0;
+			for(var i = 0; i < num.length; i++){
+				count++;
+			}
+			document.write("Digitos de " + num + ": " + count);
+		}
+
+		var num = prompt("Introduce un numero: ", " ");
+		num = num.toString();
+		calcDigitos(num);
+		document.write("<br/>");
+
+
+		function calcMedia(num1, num2, num3){
+
+			var resultado = (parseInt(num1)+parseInt(num2)+parseInt(num3))/3;
+			return resultado;
+		}
+
+		var num1 = prompt("Introduce el primer numero: ", " ");
+		var num2 = prompt("Introduce el segundo numero: ", " ");
+		var num3 = prompt("Introduce el tercer numero: ", " ");
+
+		var resultado = calcMedia(num1, num2, num3);
+		document.write("Media de la suma: " + resultado);
+		
+
+		function calcSum(a, b, c, d, e){
+
+			var resultado = parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5);
+			return resultado;
+		}
+
+		var num1 = prompt("Introduce el primer numero: ", " ");
+		var num2 = prompt("Introduce el segundo numero: ", " ");
+		var num3 = prompt("Introduce el tercer numero: ", " ");
+		var num4 = prompt("Introduce el cuarto numero: ", " ");
+		var num5 = prompt("Introduce el quinto numero: ", " ");
+
+		var resultado = calcSum(num1, num2, num3, num4, num5);
+		document.write("Total de la suma: " + resultado);
+
+	</script>
+</body>
+</html>

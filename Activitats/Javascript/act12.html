@@ -19,7 +19,7 @@
 		}
 		document.write(count + " triangulos tienen una area mayor a 12.");
 		document.write("<br/>");
-		*/
+	
 		var suma = 0;
 		for (var i = 0; i < 10; i++) {
 			var entrada = prompt("Introduce un numero: " , " ");
@@ -71,9 +71,36 @@
 		} else {
 			document.write("Hay mas escalenos.");
 		}
-		<document.write("<br/>");
+		document.write("<br/>");
 
-		
+		*/
+		var notaA = 0;
+
+		for(var i = 0; i < 5; i++){
+			var entrada = prompt("Introduce la nota del alumno de la clase A: " , " ");
+			notaA = parseInt(notaA) + parseInt(entrada);
+		}
+		var mediaA = notaA/5;
+		document.write("Media de la case A: " + mediaA);
+		document.write("<br/>");
+
+		var notaB = 0;
+		for(var i = 0; i < 6; i++){
+			var entrada2 = prompt("Introduce la nota del alumno de la clase B: " , " ");
+			notaB = parseInt(notaB) + parseInt(entrada2);
+		}
+		var mediaB = notaB/6;
+		document.write("Media de la case B: " + mediaB);
+		document.write("<br/>");
+
+		var notaC = 0;
+		for(var i = 0; i < 11; i++){
+			var entrada3 = prompt("Introduce la nota del alumno de la clase C: " , " ");
+			notaC = parseInt(notaC) + parseInt(entrada3);
+		}
+		var mediaC = notaA/11;
+		document.write("Media de la case C: " + mediaC);
+
 	</script>
 </body>
 </html>

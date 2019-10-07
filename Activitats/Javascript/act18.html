@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var count = 0;
+		bool = false;
+		var entrada;
+		while(bool != true){
+			entrada = prompt("Introduce un nombre: ", " ");
+			if(entrada == "end"){
+				bool = true;
+				document.write("Intentos necesitados: " + count + "<br/>");
+			} else {
+				count++;
+			}
+		}
+		
+
+		var str = "Cre que hay muchas actividades";
+		str = str.toLowerCase();
+		word = "hay";
+		var str2 = str.indexOf(word);
+
+		if (str2 != -1) {
+			document.write("Position of the word in the text: " + str2 + "<br/>");
+		} else {
+			document.write("The word " + word + " isn't in the text." + "<br/>");
+		}
+		
+		var palabra = "amamam";
+		var palindromo = "";
+		for(var i = palabra.length-1; i >= 0; i--){
+			palindromo = palindromo + palabra.substring(i, i+1);
+		}
+		if(palindromo == palabra){
+			document.write(palabra + " es una palabra palíndroma." + "<br/>");
+		} else {
+			document.write(palabra + " no es una palabra palíndroma." + "<br/>");
+		}
+
+		var email = "prueba@gmail.com";
+
+		for(var i = 0; i < email.length; i++){
+			if (email.charAt(i) == "@") {
+				document.write("El caracter @ si aparece en este email." + "<br/>");
+			} 
+		}
+		
+
+		var palabra = "hotorrinolaringolo";
+		document.write("Palabra seleccionada: " + palabra + "<br/>");
+
+		for (var i = 0; i < palabra.length/2; i++) {
+			document.write(palabra.charAt(i));
+		}
+		document.write("<br/>");
+		document.write("Ultima letra: " + palabra.charAt(palabra.length-1)  + "<br/>");
+
+		var reverse = "";
+		for(var i = palabra.length-1; i >= 0; i--){
+			reverse = reverse + palabra.substring(i, i+1);
+		}
+		document.write("Palabra en orden alterado: " + reverse  + "<br/>");
+
+		for (var i = 0; i < palabra.length; i++) {
+			document.write(palabra.charAt(i) + " ");
+		}
+
+	</script>
+</body>
+</html>

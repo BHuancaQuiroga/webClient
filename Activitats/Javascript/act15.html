@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var fecha = new Date();
+		var mes = fecha.getMonth();
+
+		if (mes >= 0 && mes <= 2) {
+			document.write("Estamos en el primer trimestre del año.");
+		} else if(mes >=3 && mes <= 5){
+			document.write("Estamos en el segundo trimestre del año.");
+		} else if(mes >=6 && mes <= 8){
+			document.write("Estamos en el tercer trimestre del año.");
+		} else if(mes >=9 && mes <= 11){
+			document.write("Estamos en el cuarto trimestre del año.");
+		} else {
+			document.write("Error en la obtención del mes.");
+		}
+
+	</script>
+</body>
+</html>
