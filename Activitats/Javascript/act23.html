@@ -1,0 +1,53 @@
+<html>
+	<head>
+	</head>
+	 <body>
+		 <script type="text/javascript"> 
+			function countSelected() {
+				var football = document.getElementById('checkbox1').checked;
+				var tennis = document.getElementById('checkbox2').checked;
+				var karate = document.getElementById('checkbox3').checked;
+
+				if(football != true && tennis != true && karate != true){
+					alert('You did not select any sport.');
+				} else {
+					if(football == true){
+						if(tennis == true){
+							if (karate == true) {
+								alert('You selected Football, Tennis and Karate.');
+							} else {
+								alert('You selected Football and Tennis.');
+							}
+						} else if(tennis != true){
+							if (karate != true) {
+								alert('You selected Football.');
+							} else {
+								alert('You selected football and karate.');
+							}
+						}
+					} else if(football != true) {
+						if(tennis == true){
+							if(karate == true){
+								alert('You selected Tennis and karate.');
+							} else {
+								alert('You selected Tennis.');
+							}
+						} else {
+							alert('You selected Karate.');
+						}
+					}
+				}
+			}
+		 </script> 
+		<form>
+			<input type="checkbox" id="checkbox1">Football
+			<br>
+			<input type="checkbox" id="checkbox2">Tennis
+			<br>
+			<input type="checkbox" id="checkbox3">Karate
+			<br>
+			<br>
+			<input type="button" value="Show results" onClick="countSelected()">
+		</form>
+	 </body>
+ </html>

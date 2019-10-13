@@ -1,0 +1,22 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript"> 
+			function showSelected() {
+				var mayor = document.getElementById('radio1').checked;
+
+				if (document.getElementById('radio1').checked) {
+					alert("You can access to this web page.");
+				} 
+				else {
+					alert("You can't access to this web page.");
+				}
+			}	
+		</script>
+		<form>
+			<input type="radio" id="radio1">Older than 18<br/>
+			<input type="radio" id="radio2">Younger than 18<br/>
+			<input type="button" value="Mostrar" onClick="showSelected()">
+		</form>
+	</body>
+</html>

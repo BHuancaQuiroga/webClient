@@ -1,0 +1,24 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript"> 
+			function showData(){
+
+				var fname = document.getElementById("nom").value;
+				var email = document.getElementById("email").value;
+				var comments = document.getElementById("comments").value;
+				alert('Data introduced:\n' + '\n' + fname + '\n' + email + '\n' + '\n' + comments);
+				
+			}
+		</script>
+		<form>
+			Name: <input type="text" id="nom"><br>
+			<br>
+			Email: <input type="text" id="email"><br>
+			<br>
+			<textarea id="comments" rows="10" cols="50" ></textarea> <br/>
+			<br>
+			<input type="button" value="Check" onClick="showData()">
+		</form>
+	</body>
+</html>

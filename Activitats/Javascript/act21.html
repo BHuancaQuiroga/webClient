@@ -1,0 +1,26 @@
+!<DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function checkPwd(){
+			var n = document.getElementById('pwd').value;
+			var m = document.getElementById('pwd2').value;
+
+			if(n === m){
+				alert('Correct. Same password');
+			} else {
+				alert('Incorrect. Not same password.');	
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="password" id="pwd">
+	<br/><br/>
+	<input type="password" id="pwd2">
+	<br/><br/>
+	<button onclick="checkPwd()">Check password</button>
+
+</body>
+</html>

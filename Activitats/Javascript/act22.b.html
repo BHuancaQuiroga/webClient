@@ -1,0 +1,44 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript"> 
+			function calcPrice() {
+			var sel1 = document.getElementById('Processor');
+			var sel2 = document.getElementById('Monitor');
+			var sel3 = document.getElementById('HD');
+			document.getElementById('text').value = parseInt(sel1.options[sel1.selectedIndex].value) + parseInt(sel2.options[sel2.selectedIndex].value) + parseInt(sel3.options[sel3.selectedIndex].value);
+
+		}
+		</script>
+		<h2>Processor</h2>
+		<form>
+			<select id="Processor" onChange="recogerDatos()">
+				<option value="400">Intel I3</option>
+				<option value="600">Intel I5</option>
+				<option value="800">Intel I7</option>
+			</select>
+		</form>
+		<br/>
+		<h2>Monitor</h2>
+		<form>
+			<select id="Monitor" onChange="recogerDatos()">
+				<option value="250">Samsung 20'</option>
+				<option value="350">Samsung 22'</option>
+				<option value="500">Samsung 26'</option>
+			</select>
+		</form>
+		<br/>
+		<h2>Hard Disk</h2>
+		<form>
+			<select id="HD" onChange="recogerDatos()">
+				<option value="300">500 GB</option>
+				<option value="440">1 TB</option>
+				<option value="500">3 TB</option>
+			</select>
+		</form>
+		<br/>
+		<button type="button" onclick="calcPrice()">Calculate final price</button>
+		<input type="text" id="text">
+	</body>
+</html>

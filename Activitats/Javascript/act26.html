@@ -1,0 +1,28 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript">
+			function empty(control){
+				control.value= '';
+			}
+
+			function checkPwsd(){
+		
+				var pswd = 	document.getElementById("pswd");
+
+				if(pswd.value.length < 7 || pswd.value.length > 20){
+					alert('The password must be between 7 and 20 digits.');
+				} else {
+					alert('Successful entry!');
+				}
+			}
+		</script>
+		<form>
+		<input type="text" id="username" onFocus="empty(this)" onBlur="checkEntry(this)" value="Introduce your username."><br>
+		<br>
+		<input type="password" id="pswd"><br>
+		<br>
+		<input type="button" value="Check" onClick="checkPwsd()">
+		</form>
+	</body>
+</html>

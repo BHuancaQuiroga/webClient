@@ -1,0 +1,32 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript"> 
+			function calcPrice() {
+			var sel1 = document.getElementById('pizzas');
+			var x = document.getElementById("quantity").value;
+
+			document.getElementById('text').value = parseInt(sel1.options[sel1.selectedIndex].value) * parseInt(x);
+
+
+		}
+		</script>
+		<h2>Pizzas</h2>
+		<form>
+			<select id="pizzas" onChange="recogerDatos()">
+				<option value="6">Pepperoni</option>
+				<option value="5">Quatro Formaggi</option>
+				<option value="4">Procciuto</option>
+			</select>
+		</form>
+		<br/>
+		<form>
+			<h4>Quantity</h4>
+			<input type="number" id="quantity"><br>
+			<br>
+			<button type="button" onclick="calcPrice()">Calculate final price</button>
+			<input type="text" id="text">
+		</form>
+	</body>
+</html>
