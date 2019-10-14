@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<style type="text/css">
+		table, th, td {
+			border:1px solid black; 
+			border-collapse: collapse; 
+			padding: 15px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Table</h3>
+	<table>
+		<tr id="tr1">
+			<th>Name</th>
+			<th>Surname</th>
+			<th>Age</th>
+		</tr>
+		<tr id="tr2">
+			<td>Benjamin Caleb</td>
+			<td>Huanca Quiroga</td>
+			<td>19</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$("#tr1").click(function() {
+					$(this).css("background-color", "lightblue");
+			});
+			$("#tr2").click(function() {
+					$(this).css("background-color", "crimson");
+			});
+		});
+	</script>
+</body>
+</html>
