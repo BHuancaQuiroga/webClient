@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Activitat ADHOC JQuery</title>
+		<script type="text/javascript" src="jqueryMin.js"></script>
+	</head>
+        <style>
+            * { background-color:white; }
+            	div {
+	            	margin: 0px;
+	            	padding: 20px;
+	            	border: ridge 4px black;
+	                border-radius: 10px;
+            }
+        </style>
+	<body>
+		<h1>Selecting Elements</h1>
+		<hr>
+		<div id="xiaomi">
+			<p id="XZM568" class="caro">Xioami Mi Mix 3 --- XZM568 --- Xiaomi --- <b>750</b></p>
+			<p id="RTS809" class="medio">Xioami Redmi Note 7 --- RTS809 --- Xiaomi --- <b>135</b></p>
+			<p id="YTP212" class="barato">Xioami Redmi 4A --- YTP212 --- Xiaomi --- <b>110</b></p>
+		</div><br>
+		<div id="apple">
+			<p id="LHK998" class="caro">Apple Iphone 11 --- LHK998 --- Apple --- <b>860</b></p>
+			<p id="KUO995" class="medio">Apple Iphone 7 --- KUO995 --- Apple --- <b>465</b></p>
+			<p id="GFH500" class="barato">Apple Iphone 6s --- GFH500 --- Apple --- <b>210</b></p>
+		</div><br>
+		<div id="huawei">
+			<p id="UJF012" class="caro">Huawei P30 Pro --- UJF012 --- Huawei --- <b>860</b></p>
+			<p id="ERT444" class="medio">Huawei P Smart --- ERT444 --- Huawei --- <b>170</b></p>
+			<p id="BGY132" class="barato">Huawei Y5 --- BGY132 --- Huawei --- <b>90</b></p>
+		</div><br>
+		<div id="motorola">
+			<p id="PPS767" class="caro">Motorola One Zoom --- PPS767 --- Motorola --- <b>430</b></p>
+			<p id="XCD633" class="medio">Motorola Moto G7 --- XCD633 --- Motorola --- <b>216</b></p>
+			<p id="FNC123" class="barato">Motorola Moto E4 --- FNC123 --- Motorola --- <b>160</b></p>
+		</div><br>
+		<hr><br>
+		<p>ID</p>
+		<input type="text" id="ids">
+		<input type="button" value="Select" id="b1">
+		<p>CLASS</p>
+		<input type="text" id="classes">
+		<input type="button" value="Select" id="b2">
+		<p>TAG</p>
+		<input type="text" id="tags">
+		<input type="button" value="Select" id="b3">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$("div, p, h1, b").css({"background-color":"white"});
+					var ids = $("#ids").val();
+					var selected = $("#" + ids + ", " + "#" + ids + " *");
+					selected.css({"background-color":"lightblue"});
+				});
+
+				$("#b2").click(function(){
+					$("div, p, h1, b").css({"background-color":"white"});
+					var classes = $("#classes").val();
+					var selected = $("." + classes + ", " + "." + classes + " *");
+					selected.css({"background-color":"lightcoral"});
+				});
+
+				$("#b3").click(function(){
+					$("div, p, h1, b").css({"background-color":"white"});
+					var tags = $("#tags").val();
+					var selected = $(tags + ", " + tags + " *");
+					selected.css({"background-color":"lightgray"});
+				});
+			});
+		</script>
+	</body>
+</html>

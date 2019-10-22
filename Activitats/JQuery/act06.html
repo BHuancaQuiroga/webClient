@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ACTIVITAT 6</title>
+	<style type="text/css">
+		table, th, td {
+			border:1px solid black; 
+			border-collapse: collapse; 
+			padding: 15px;
+		}
+
+		td{
+			text-align: center;
+		}
+
+	</style>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+</head>
+<body>
+	<table id="table1">
+		<tr>
+			<td>OFF</td>
+			<td>OFF</td>
+			<td>OFF</td>
+		</tr>
+		<tr>
+			<td>OFF</td>
+			<td>OFF</td>
+			<td>OFF</td>
+		</tr>
+		<tr>
+			<td>OFF</td>
+			<td>OFF</td>
+			<td>OFF</td>
+		</tr>
+		<tr>
+			<td>OFF</td>
+			<td>OFF</td>
+			<td>OFF</td>
+		</tr>
+	</table><br>
+	<table id="table2">
+		<tr>
+			<th>OFF</th>
+			<th>OFF</th>
+			<th>OFF</th>
+		</tr>
+		<tr>
+			<td>OFF</td>
+			<td>OFF</td>
+			<td>OFF</td>
+		</tr>
+		<tr>
+			<td>OFF</td>
+			<td>OFF</td>
+			<td>OFF</td>
+		</tr>
+		<tr>
+			<td>OFF</td>
+			<td>OFF</td>
+			<td>OFF</td>
+		</tr>
+	</table><br>
+	<input type="button" id="boton" value="Press button">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#boton").click(function(){
+				$("#table1 td").text("ON");
+				
+			});
+		});
+	</script>
+</body>
+</html>

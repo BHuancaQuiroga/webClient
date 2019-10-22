@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ACTIVITAT 7</title>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+</head>
+<body>
+	<a href="">Link</a><br>
+	<br>
+	<input type="button" id="b1" value="Button 1">
+	<input type="button" id="b2" value="Button 2">
+	<input type="button" id="b3" value="Button 3">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("a").attr("href", "https://www.google.com");
+			});
+
+			$("#b2").click(function(){
+				$("a").attr("href", "http://www.iesmanacor.cat/");
+			});
+
+			$("#b3").click(function(){
+				$("a").attr("href", "https://www.amazon.es/");
+			});
+		});
+	</script>
+</body>
+</html>

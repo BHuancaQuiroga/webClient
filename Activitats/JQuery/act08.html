@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title>ACTIVITAT 8</title>
+	<style type="text/css">
+		table, th, td {
+			border:1px solid black; 
+			border-collapse: collapse; 
+			padding: 15px;
+		}
+
+		td{
+			text-align: center;
+		}
+
+		.class1{
+			background-color: lightblue;
+		}
+
+		.class2{
+			background-color: lightgreen;
+		}
+
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Nom</th>
+				<th>Edat</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Benjamin Caleb</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td>Jose Carlos</td>
+				<td>33</td>
+			</tr>
+		</tbody>
+	</table><br>
+	<br>
+	<input type="button" id="b1" value="Button 1">
+	<input type="button" id="b2" value="Button 2">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("thead").addClass("class1");
+			});
+
+			$("#b2").click(function(){
+				$("tbody").addClass("class2");
+			});
+		});
+	</script>
+</body>
+</html>

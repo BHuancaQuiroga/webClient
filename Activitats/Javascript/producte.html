@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>PRODUCTE LIST</title>
 	<script type="text/javascript" src="scriptProducte.js"></script>
 	<script type="text/javascript">
@@ -37,8 +38,7 @@
 		}
 
 		function findByCat(){
-			var marca = document.getElementById("item").value;
-
+			var marca = (document.getElementById("item").value).toLowerCase();
 			var txt = "";
 
 			for(var i = 0; i < list.length; i++){
@@ -54,9 +54,10 @@
 		}
 		function countBrand(){
 
+			var categoria = (document.getElementById("item").value).toLowerCase();
 			var count = 0;
 			for(var i = 0; i < list.length; i++){
-				if(list[i].getCategoria() === "Xiaomi"){
+				if(list[i].getCategoria() === categoria){
 					count++;
 				}
 			}
@@ -88,6 +89,7 @@
 			list.pop();
 			printList();
 		}
+
 	</script>
 </head>
 <body>
@@ -99,7 +101,7 @@
 	<button onclick="findByCat()">Search by this category</button>
 	<button onclick="orderAsc()">Seach by Asc. Price</button>
 	<button onclick="orderDesc()">Seach by Desc. Price</button>
-	<button onclick="countBrand()">Total Xiaomis</button>
+	<button onclick="countBrand()">Total products of the introduced category</button>
 	<button onclick="restart()">Go home</button>
 
 	<h3>Data management</h3>
@@ -114,11 +116,11 @@
 	<script type="text/javascript">
 		var list = new Array();
 
-		list[0]= new Funda("Funda Iphone X", "ABC123", "Iphone", 100);
-		list[1]= new Funda("Funda Xioami Redmni 4A", "DEF456", "Xiaomi", 45);
-		list[2]= new Funda("Funda Huawei P30","GHI789", "Huawei", 50);
-		list[3]= new Funda("Funda Motorola", "JKL123", "Motorola", 35);
-		list[4]= new Funda("Funda Iphone XII", "MNO456", "Iphone", 600);
+		list[0]= new Funda("Funda Iphone X", "ABC123", "iphone", 100);
+		list[1]= new Funda("Funda Xioami Redmni 4A", "DEF456", "xiaomi", 45);
+		list[2]= new Funda("Funda Huawei P30","GHI789", "huawei", 50);
+		list[3]= new Funda("Funda Motorola", "JKL123", "motorola", 35);
+		list[4]= new Funda("Funda Iphone XII", "MNO456", "iphone", 600);
 		printList();
 	</script>
 </body>
