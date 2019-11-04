@@ -27,7 +27,7 @@
 				$("div").text(event.pageX + ", " + event.pageY);
 				$("div").css("text-align", "center");
 				
-				if ($("div").event.pageX > 209 || $("div").event.pageY > 207) {
+				if (event.pageX > 209 || event.pageY > 207) {
 					$("div").text("Out of the DIV");
 				}
 			});

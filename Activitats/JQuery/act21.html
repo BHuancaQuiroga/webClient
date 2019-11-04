@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<title></title>
+</head>
+<body>
+	<div id="d1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#d1").click(function(){
+				$(this).fadeTo("slow", 0.2);
+			});
+
+			$("#d1").dblclick(function(){
+				$(this).fadeTo("slow", 1);
+			});
+		});
+	</script>
+</body>
+</html>

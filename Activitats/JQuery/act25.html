@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title></title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<h1>Basic Arithmetic Operations</h1>
+	<form action="php/basicArithOps.php" method="get">
+		<p>Operator 1</p>
+		<input type="text" id="inp1"><br>
+		<p>Operator 2</p>
+		<input type="text" id="inp2"><br>
+		<hr>
+		<input type="button" id="b1" value="Addition">
+		<input type="button" id="b2" value="Substaction">
+		<input type="button" id="b3" value="Product">
+		<input type="button" id="b4" value="Division">
+	</form><br>
+	<div id="answer">
+		
+	</div>
+
+	<script type="text/javascript">
+
+		var x;
+		x = $(document);
+		x.ready(initEvent);
+
+		function initEvent(){
+			var x;
+			x =$("#b1");
+			x.click(sub1);
+
+			var y;
+			y =$("#b2");
+			y.click(sub2);
+
+			var z;
+			z =$("#b3");
+			z.click(sub3);
+
+			var v;
+			v =$("#b4");
+			v.click(sub4);
+		}
+
+		function sub1(){
+			var a =$("#inp1").val();
+			var b =$("#inp2").val();
+			var sym = 1;
+			$.get("php/basicArithOps.php",{op1:a,op2:b,symbol:sym}, dataArrived);
+		}
+
+		function sub2(){
+			var c =$("#inp1").val();
+			var d =$("#inp2").val();
+			var sym = 2;
+			$.get("php/basicArithOps.php",{op3:c,op4:d,symbol:sym}, dataArrived);
+		}
+
+		function sub3(){
+			var e =$("#inp1").val();
+			var f =$("#inp2").val();
+			var sym = 3;
+			$.get("php/basicArithOps.php",{op5:e,op6:f,symbol:sym}, dataArrived);
+		}
+
+		function sub4(){
+			var g =$("#inp1").val();
+			var h =$("#inp2").val();
+			var sym = 4;
+			$.get("php/basicArithOps.php",{op7:g,op8:h,symbol:sym}, dataArrived);
+		}
+
+		function dataArrived(data){
+			$("#answer").html("<p>" + data + "</p>");
+		}
+
+	</script>
+</body>
+</html>

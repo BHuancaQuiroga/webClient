@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="text" id="inp" value="hello">
+	</form>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#inp").blur(function(){
+				if($(this).val() == ""){
+					alert("Can't be empty");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

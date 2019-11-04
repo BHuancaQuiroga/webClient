@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title></title>
+</head>
+<body>
+	<h1>Lista</h1>
+	<div id="contenedor"></div>
+	<hr>
+	<div>
+		<button id="b1">Añadir elemento</button>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var nItems = 0;
+			$("#b1").click(function () {
+
+				var div = $("<div/>",{id: 'div_' + nItems});
+				var divId = "#div_"+nItems;
+				var inp = $("<input/>",{type:'text',id:'input_'+nItems,value:nItems});
+				var btn = $("<button/>", {text: 'Quitar '+nItems, id: 'btn_'+nItems, click: function(){ $(divId).remove(); } });
+
+				var br = $("</br>");
+				div.append(inp);
+				div.append(btn);
+				div.append(br);
+
+				$("#contenedor").append(div);
+					nItems++;
+			});
+		});	
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title></title>
+</head>
+<body>
+	<h1>JSON activity</h1>
+	<select id="sel1">
+		<option value="palma">palma</option>
+		<option value="inca">inca</option>
+		<option value="manacor">manacor</option>
+		<option value="soller">soller</option>
+	</select><br>
+	<hr>
+	<div id="result">
+		
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sel1").change(changeOption);
+
+		});
+
+		function changeOption(){
+			var v = $("#sel1 option:selected").attr("value");
+			$.getJSON("data/personas.json", function(data){
+				var temp = "";
+				$(data["persones"]).each(function(){
+					if(this["city"] == v){
+						temp += "<li>" + this["name"] + " " + this["age"] + "</li><br>";
+
+					}
+				});
+
+				$("#result").html("<ul>" + temp + "</ul>");
+			});
+		}
+	</script>
+</body>
+</html>

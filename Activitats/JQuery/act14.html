@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title></title>
+</head>
+<body>
+	<input type="button" id="b1" value="Change color"/>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").mousedown(function(){
+				$(this).css("background-color", "lightblue");
+			});
+			$("#b1").mouseup(function(){
+				$(this).css("background-color", "lightgray");
+			});
+		});
+	</script>
+</body>
+</html>

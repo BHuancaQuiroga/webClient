@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+</head>
+<body>
+	<div id="d1" style="background-color: lightblue">
+		<p>Este es un paragrafo de prueba 1.</p>
+		<p>Este es un paragrafo de prueba 2.</p>
+		<p>Este es un paragrafo de prueba 3.</p>
+	</div>
+	<div id="d2" style="display: none;">
+		<p>Paragrafo que estaba invisible 1.</p>
+		<p>Paragrafo que estaba invisible 2.</p>
+		<p>Paragrafo que estaba invisible 3.</p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#d1").click(function(){
+				$(this).fadeOut("slow", aparece());
+			});
+
+		function aparece(){
+			$("#d2").fadeIn("slow");
+		}
+
+		});
+	</script>
+</body>
+</html>

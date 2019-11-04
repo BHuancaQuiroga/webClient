@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title></title>
+</head>
+<body>
+	<h1>ADHOC 4</h1>
+	<select id="sel1">
+		<option value="Xiaomi">Xiaomi</option>
+		<option value="Apple">Apple</option>
+		<option value="Huawei">Huawei</option>
+		<option value="Motorola">Motorola</option>
+	</select><br>
+	<br>
+	<input type="button" id="b1" value="Load"><br>
+	<hr>
+	<div id="d1"></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				var v = $("#sel1 option:selected").attr("value");
+				$.ajax({
+					type: "GET",
+					url: "data/productes.txt",
+					dataType: "text",
+					success: function(data) {
+						var temp = data.split("-");
+						var temp2 = "";
+						for(var i = 0; i < temp.length; i++){
+							var str = temp[i];
+							if (str.indexOf(v) != -1) {
+								temp2 += "<li>" + temp[i] + "</li><br>";
+							}
+						}
+						$("#d1").html("<ul>" + temp2 + "</ul>");
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

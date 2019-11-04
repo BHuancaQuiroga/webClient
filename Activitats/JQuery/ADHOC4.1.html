@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+</head>
+<body>
+	<h1>ADHOC 4.1</h1>
+	<input type="button" id="b1" value="Most expensive">
+	<hr><br>
+	<div id="d1"></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$.ajax({
+					type: "GET",
+					url: "xml/productes.xml",
+					dataType: "xml",
+					success: function(data){
+						var mostExp = 1;
+						var temp = "";
+						$(data).find("producte").each(function(){
+							var actualPreu = $(this).find('preu').text();
+							var actualModel = $(this).find('model').text();
+							if (parseInt(actualPreu) > parseInt(mostExp)) {
+								mostExp = actualPreu;
+								temp = "<li>" + actualModel + " " + mostExp + "</li>";
+							}
+						});
+
+						$("#d1").html("<ul>" + temp + "</ul>");
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

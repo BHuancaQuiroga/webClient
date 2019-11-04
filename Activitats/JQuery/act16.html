@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jqueryMin.js"></script>
+	<title></title>
+	<style type="text/css">
+		input{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="inp">
+	<input type="text" class="inp">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("input").focus(function(){
+				$(this).css("background-color", "red");
+			});
+		});
+	</script>
+</body>
+</html>
