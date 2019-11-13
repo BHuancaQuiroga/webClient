@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<productes>
+		<producte>
+			<model>Mix 3</model>
+			<ref>XZM568</ref>
+			<marca>Xiaomi</marca>
+			<preu>750</preu>
+		</producte>
+		<producte>
+			<model>Iphone 7</model>
+			<ref>KUO995</ref>
+			<marca>Apple</marca>
+			<preu>465</preu>
+		</producte>
+		<producte>
+			<model>P30 Pro</model>
+			<ref>UJF012</ref>
+			<marca>Huawei</marca>
+			<preu>800</preu>
+		</producte>
+		<producte>
+			<model>Moto E4</model>
+			<ref>FNC123</ref>
+			<marca>Motorola</marca>
+			<preu>160</preu>
+		</producte>
+	</productes>

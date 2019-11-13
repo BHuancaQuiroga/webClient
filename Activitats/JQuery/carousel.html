@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Carrousel Json</h1>
+        <div id="carro" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators"></ol>
+            <div class="carousel-inner"></div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            cargarFotos();
+        });
+        
+        function cargarFotos() {
+            $.ajax({
+                type: "GET",
+                url: "json/fotos.json",
+                success: function (data) {
+                    for(i in data){
+                        var nouLI = $("<li/>");
+                        nouLI.attr("data-target","#carro");
+                        nouLI.attr("data-slide-to", i);
+                        if(i == 0){
+                            nouLI.addClass("active");
+                        }
+                        $("#carro").children("ol").append(nouLI);
+
+                        var nouDIV = $("<div/>");
+                        nouDIV.addClass("carousel-item");
+                        if(i== 0){
+                            nouDIV.addClass("active");
+                        }
+                        var foto = "img/"+data[i];
+
+                        var nouIMG = $("<img/>",{src:foto, alt:foto});
+                        nouDIV.append(nouIMG);
+                        $("#carro").children("div").append(nouDIV);
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

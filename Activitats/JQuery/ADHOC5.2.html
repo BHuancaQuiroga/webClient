@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jqueryMin.js"></script>
+    <title>PARTE 2</title>
+</head>
+<body>
+<h1>ADHOC 5.2</h1>
+<select id="sel1">
+    <option value="0">Selecciona</option>
+</select>
+<script>
+    $(document).ready(function () {
+        $("#sel1").ready(getDataJSON);
+    });
+
+    function getDataJSON() {
+        $.ajax({
+            type: "GET",
+            url: "php/marques.php",
+            success: function (data) {
+                var temp = "";
+                var response = JSON.parse(data);
+                console.log(response);
+                $(response).each(function () {
+
+                    temp += "<option>" + this["nom"] + "</option><br/>";
+
+                });
+
+                $("#sel1").append(temp);
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{"persones" : [
+    {"name": "PACO", "age": "44", "city": "palma"},
+    {"name": "MARIA", "age": "33", "city": "inca"},
+    {"name": "JOSE", "age": "25", "city": "inca"},
+    {"name": "JOAN", "age": "51", "city": "manacor"},
+    {"name": "ALICIA", "age": "22", "city": "manacor"},
+    {"name": "PETER", "age": "19", "city": "soller"}
+]}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jqueryMin.js"></script>
+    <title>PARTE 4</title>
+    <style>
+        table, th, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>ADHOC 5.4</h1>
+<select id="sel1">
+    <option value="0">Selecciona</option>
+</select>
+<input type="button" id="b1" value="Check">
+<hr>
+<div id="d1">
+    <table id="t1">
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#b1").click(getDataJSON);
+    });
+
+    function getDataJSON() {
+
+        $.ajax({
+            type: "GET",
+            url: "php/productes2.php",
+            success: function (data) {
+                //var temp = "";
+                var temp2 = "";
+                var titulos = "<th>" + "Referencia" + "</th>" + "<th>" + "Modelo" + "</th>" + "<th>" + "ID Marca" + "</th>" + "<th>" + "Precio" + "</th>";
+                var response = JSON.parse(data);
+                console.log(response);
+                $(response).each(function () {
+
+                    //temp += "<option>" + this["ref"] + " " + this["model"] + " " + this["marca"] + " " + this["preu"] + "</option><br/>";
+                    temp2 += "<tr>" + "<td>" + this["ref"] + "</td>" + "<td>" + this["model"] + "</td>" + "<td>" + this["marca"] + "</td>"  + "<td>" + this["preu"]  + "</td>" + "</tr>";
+                });
+                //$("#sel1").append(temp);
+                $("#t1").append(titulos);
+                $("#t1").append(temp2);
+            }
+        });
+    }
+</script>
+</body>
+</html>

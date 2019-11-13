@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jqueryMin.js"></script>
+    <title>PARTE 3</title>
+</head>
+<body>
+<h1>ADHOC 5.3</h1>
+<select id="sel1">
+    <option>Selecciona</option>
+</select>
+<select id="sel2">
+    <option>Selecciona</option>
+</select>
+<script>
+    $(document).ready(function () {
+        $("#sel1").ready(getDataJSON);
+        $("#sel1").change(mirarMarcaInfo);
+    });
+
+    function getDataJSON() {
+        $.ajax({
+            type: "GET",
+            url: "php/marques.php",
+            success: function (data) {
+                var temp = "";
+                var response = JSON.parse(data);
+                $(response).each(function () {
+
+                    temp += "<option>" + this["nom"] + "</option><br/>";
+
+                });
+                $("#sel1").append(temp);
+            }
+        });
+    }
+
+    function mirarMarcaInfo() {
+        $("#sel2").empty();
+        var v = $("#sel1 option:selected").text();
+        var marca = getMarca(v);
+        $.ajax({
+            type: "GET",
+            url: "php/productes2.php",
+            success: function (data) {
+                var temp = "";
+                var response = JSON.parse(data);
+                $(response).each(function () {
+                    if (this["marca"] === marca){
+                        temp += "<option>" + this["model"] + "</option><br/>";
+                    }
+                });
+
+                $("#sel2").append(temp);
+            }
+        });
+    }
+
+    function getMarca(v) {
+        switch (v) {
+            case 'Xiaomi':
+                return "1";
+                break;
+            case 'Apple':
+                return "2";
+                break;
+            case  'Huawei':
+                return "3";
+                break;
+            case 'Motorola':
+                return "4";
+                break;
+            case 'HTC':
+                return "5";
+                break;
+        }
+    }
+</script>
+</body>
+</html>
