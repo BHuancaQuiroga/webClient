@@ -68,7 +68,24 @@
 					selecteds.css({"background-color":"blue"});
 				});
 
+				$("#lexp").click(function(){
+					$("div, p, h1, b").css({"background-color":"white"});
+					var lexp = $("#sel1 option:selected").text();
+					var selecteds = $("#" + lexp + ", #" + lexp + " *").children("b");
 
+					var min=10000;
+					var indexMin = 0;
+					selecteds.each(function (index){
+						var p = $(this).text();
+						if(parseInt(p)<min){
+							min = parseInt(p);
+							indexMin = index;
+						}
+					});
+					var selecteds = $("#" + lexp).children("p").eq(indexMin);
+
+					selecteds.css({"background-color":"blue"});
+				});
 			});
 		</script>
 	</body>

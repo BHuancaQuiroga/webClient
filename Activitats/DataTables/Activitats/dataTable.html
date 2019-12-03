@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+</head>
+<body>
+    <table id="t1">
+        <thead>
+            <tr id="file1">
+
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "php/productes2.php",
+                success: function (data) {
+                    var response = JSON.parse(data);
+                    console.log(response);
+                    var titles = "<th>" + "Referencia" + "</th>" + "<th>" + "Modelo" + "</th>" + "<th>" + "ID Marca" + "</th>" + "<th>" + "Precio" + "</th>";
+                    var temp = "";
+                    $(response).each(function () {
+                        temp += "<tr>" + "<td>" + this["ref"] + "</td>" + "<td>" + this["model"] + "</td>" + "<td>" + this["marca"] + "</td>"  + "<td>" + this["preu"]  + "</td>" + "</tr>";
+
+                    });
+
+                    $("#file1").append(titles);
+                    $("tbody").append(temp);
+                }
+            });
+
+            $("#t1").DataTable();
+        });
+    </script>
+</body>
+</html>

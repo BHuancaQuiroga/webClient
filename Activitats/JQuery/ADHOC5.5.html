@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jqueryMin.js"></script>
+    <title></title>
+    <style>
+        table, th, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>ADHOC 5.5 generar Lista</h1>
+
+<input type="button" id="b1" value="Check">
+<hr>
+<div id="d1">
+    <ul id="ul1">
+
+    </ul>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#b1").click(getDataJSON);
+    });
+
+    function getDataJSON() {
+
+        $.ajax({
+            type: "GET",
+            url: "php/productes2.php",
+            success: function (data) {
+                var temp = "";
+                var response = JSON.parse(data);
+                console.log(response);
+                $(response).each(function () {
+
+                    temp += "<li>" + this["model"] + "</li>";
+                });
+
+                $("#ul1").append(temp);
+            }
+        });
+    }
+</script>
+</body>
+</html>

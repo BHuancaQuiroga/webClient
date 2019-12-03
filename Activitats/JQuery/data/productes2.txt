@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "ref": "XZM568",
+            "model": "Mix 3",
+            "marca": "1",
+            "preu": "750"
+        },
+        {
+            "ref": "KUO995",
+            "model": "Iphone 7",
+            "marca": "2",
+            "preu": "600"
+        },
+        {
+            "ref": "UJF012",
+            "model": "P30 Pro",
+            "marca": "3",
+            "preu": "687"
+        },
+        {
+            "ref": "YTP212",
+            "model": "Redmi 4A",
+            "marca": "1",
+            "preu": "130"
+        },
+        {
+            "ref": "FNC123",
+            "model": "Moto E4",
+            "marca": "4",
+            "preu": "250"
+        }
+    ]
+}
