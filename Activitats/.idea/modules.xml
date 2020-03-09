@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Activitats.iml" filepath="$PROJECT_DIR$/.idea/Activitats.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../InterficiesWeb/.idea/InterficiesWeb.iml" filepath="$PROJECT_DIR$/../../InterficiesWeb/.idea/InterficiesWeb.iml" />
+      <module fileurl="file://C:/wamp64/www/webClient/.idea/webClient.iml" filepath="C:/wamp64/www/webClient/.idea/webClient.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jqueryMin.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="t1">Formulario</h1>
+    <select id="sel1">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="ca">CA</option>
+    </select>
+    <hr>
+
+    <form>
+        <h3 id="user">Usuario</h3>
+        <input type="text" id="username">
+        <h3 id="pswd">Contraseña</h3>
+        <input type="text"><br/>
+        <br/>
+        <input type="button" id="b1" value="Enviar">
+    </form>
+    <script>
+        $(document).ready(function () {
+
+            checkLang();
+
+        });
+
+        $("#sel1").change(function(){
+            setCookie();
+        });
+
+        function setCookie() {
+            var v =  $("#sel1 option:selected").attr("value");
+
+            setLang(v);
+            var nomCookie = "galleta";
+            $.ajax({
+                type: "GET",
+                url: "php/setCookie.php",
+                data: {lang:v, nomCookie:nomCookie}
+            });
+        }
+
+
+        function checkLang() {
+
+            var cookieName = "galleta";
+            $.ajax({
+                type: "GET",
+                url: "php/getCookie.php",
+                data: {lang:cookieName},
+                success: function (response) {
+
+                    if (response === "null"){
+
+                        setNavLang();
+
+                    } else {
+                        setLang(response);
+                    }
+                }
+            });
+        }
+        
+        function setNavLang() {
+
+            $.ajax({
+                type: "GET",
+                url: "php/navLang.php",
+                success: function (data) {
+                    setLang(data);
+                }
+            });
+        }
+
+        function setLang(lang){
+
+            $.ajax({
+                type: "GET",
+                url: "php/lang.php",
+                data: {lang:lang},
+                success: function (response) {
+
+                    var parsedResp = JSON.parse(response);
+                    $("#t1").html(parsedResp["form"]);
+                    $("#user").html(parsedResp["user"]);
+                    $("#pswd").html(parsedResp["password"]);
+                    $("#b1").val(parsedResp["submit"]);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -35,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../InterficiesWeb" />
+    <property name="last_opened_file_path" value="C:/wamp64/www/webServidor" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RunDashboard">
@@ -62,6 +62,9 @@
       <updated>1572438065299</updated>
       <workItem from="1572438079596" duration="2080000" />
       <workItem from="1572519010227" duration="897000" />
+      <workItem from="1580200235254" duration="7636000" />
+      <workItem from="1580232209653" duration="436000" />
+      <workItem from="1580282123520" duration="34000" />
     </task>
     <servers />
   </component>

@@ -4,8 +4,30 @@
 	<meta charset="utf-8">
 	<title>PRODUCTE LIST</title>
 	<script type="text/javascript" src="scriptProducte.js"></script>
+</head>
+<body>
+	<h3>Phone case list</h3>
+	<ul id="lista">
+	</ul>
+	<hr/>
+	Search:		<input type="text" id="item"/><br/><br/>
+	<button onclick="findByCat()">Search by this category</button>
+	<button onclick="orderAsc()">Seach by Asc. Price</button>
+	<button onclick="orderDesc()">Seach by Desc. Price</button>
+	<button onclick="countBrand()">Total products of the introduced category</button>
+	<button onclick="restart()">Go home</button>
+
+	<h3>Data management</h3>
+	Name:		<input type="text" id="nom"/><br/><br/>
+	Reference:	<input type="text" id="ref"/><br/><br/>
+	Category:	<input type="text" id="cat"/><br/><br/>
+	Price:		<input type="text" id="pr"/><br/><br/>
+	<button onclick="addInici()">Add top</button>
+	<button onclick="takeInici()">Take top</button>
+	<button onclick="addFinal()">Add end</button>
+	<button onclick="takeFinal()">Take end</button>
 	<script type="text/javascript">
-		
+
 		function printList(){
 			var txt = "";
 			for (var i = 0; i < list.length; i++) {
@@ -91,28 +113,6 @@
 		}
 
 	</script>
-</head>
-<body>
-	<h3>Phone case list</h3>
-	<ul id="lista">
-	</ul>
-	<hr/>
-	Search:		<input type="text" id="item"/><br/><br/>
-	<button onclick="findByCat()">Search by this category</button>
-	<button onclick="orderAsc()">Seach by Asc. Price</button>
-	<button onclick="orderDesc()">Seach by Desc. Price</button>
-	<button onclick="countBrand()">Total products of the introduced category</button>
-	<button onclick="restart()">Go home</button>
-
-	<h3>Data management</h3>
-	Name:		<input type="text" id="nom"/><br/><br/>
-	Reference:	<input type="text" id="ref"/><br/><br/>
-	Category:	<input type="text" id="cat"/><br/><br/>
-	Price:		<input type="text" id="pr"/><br/><br/>
-	<button onclick="addInici()">Add top</button>
-	<button onclick="takeInici()">Take top</button>
-	<button onclick="addFinal()">Add end</button>
-	<button onclick="takeFinal()">Take end</button>
 	<script type="text/javascript">
 		var list = new Array();
 

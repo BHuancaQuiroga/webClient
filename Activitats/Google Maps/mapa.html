@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.js"
+            integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1>My First Google Map</h1>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+    $(document).ready(function () {
+        myMap();
+        getArta();
+    });
+
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(40.4636688,-3.7492199),
+            zoom:5,
+        };
+        var map = new google.maps.Map($("#googleMap")[0],mapProp);
+    }
+
+    function getArta() {
+        $.ajax({
+            type: "get",
+            url: "json/arta.json",
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=myMap"></script>
+</body>
+</html>

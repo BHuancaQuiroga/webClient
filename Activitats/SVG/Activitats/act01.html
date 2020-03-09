@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activitat 1</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1>Creació d'una imatge SVG de forma dinàmica a partir d’un JSON.</h1>
+    <br/>
+    <svg width="1000" height="500" id="imagen">
+        <rect width="1000" height="500" style="fill: lightblue"></rect>
+    </svg>
+</body>
+<script>
+    var svg = document.getElementById('imagen');
+
+    function crearCercles() {
+        $.ajax({
+            type: "get",
+            url: "json/data.json",
+            success: function (data) {
+
+                var circulos = data;
+
+                for(var i=0; i<circulos.length; i++){
+
+                    var circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
+                    circle.setAttributeNS(null, 'cx', 50 + Math.random()*1100);
+                    circle.setAttributeNS(null, 'cy', 50 + Math.random()*500);
+                    circle.setAttributeNS(null, 'r', circulos[i]['r']);
+                    circle.setAttributeNS(null, 'stroke', 'rgb(150,170,190)');
+                    circle.setAttributeNS(null, 'stroke-width', 1.5);
+                    circle.setAttributeNS(null, 'fill', "yellow");
+
+                    svg.appendChild(circle);
+
+                }
+            }
+        });
+    }
+
+    $(document).ready(function(){
+
+        crearCercles();
+
+    });
+</script>
+</html>
